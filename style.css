@@ -1,0 +1,163 @@
+body{
+    padding: 0%;
+    margin: 0%;
+    background-color:#f1f1eb
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1, p{
+    margin:0;
+    padding: 0;
+}
+
+#main-container{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 0 10px 0 0;
+}
+
+#navbar{ 
+    width: 25%;
+    height: 100vh;
+    margin-right: 15px;
+    position: fixed;
+    border-right: 2px solid #076464;
+    background-color:#29c5c5;
+}
+
+header{
+    padding-top: 20px;
+    background: #e9e9d0;
+    border-bottom: 2px dotted #076464;
+}
+
+header h1{
+    margin: 0;
+    padding: 8px 10px;
+    font-size: 26px;
+    color: #076464;
+}
+
+nav ul{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+nav ul li{
+    display: block;
+    border-bottom: 1px solid #f1f1eb;
+}
+
+nav ul li:hover{
+    border-bottom:  1px dotted #000000;
+    background-color:#f1f1eb;
+}
+
+nav ul li a{
+    display: block;
+    padding: 8px 10px;
+    color: inherit;
+    font-weight: 500;
+    font-size: 20px;
+    color: #000000;
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    color: #29c5c5;
+    cursor:pointer;
+}
+
+/*main-doc*/
+#main-doc{
+    margin: 10px 0 0 0;
+    width: 65%;
+    padding: 50px 10px 0 0;
+    line-height: 2;
+    font-size: 18px;
+    margin-left: 400px;     
+}
+
+#section-title {
+    display: inline-block;
+    color: #21acac;
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+
+.section-sub-title{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+code{
+    display: block;
+    white-space: pre;
+    line-height: 1.5;
+    padding: 0;
+    border-radius:5px;
+    background-color:#e9e9d0;
+    text-align: left;
+}
+code .code-text{
+    padding: 0;
+    margin: 0;
+    margin: -50px 0 -50px -220px;
+}
+
+footer{
+    color: #333;
+    font-size: 15px;
+    text-align: center;
+    padding: 5px;
+    margin-top: 50px;
+    background-color: #e9e9d0;
+}
+
+/*Responsive mode*/
+@media only screen and (max-width: 1100px){
+    #navbar{ 
+        height: 100%; 
+    }
+}
+
+@media only screen and (max-width: 768px){
+    #main-container{
+        display: block; 
+    }
+    
+    #navbar{ 
+        width:100%;  
+        height: 45vh; 
+        overflow-y: scroll; 
+        top: 0; 
+    }
+
+    nav ul li a{
+        padding-left: 20px;
+    }
+    
+    /*main-doc*/
+    #main-doc{
+        width: 100%; 
+        padding: 0 0 0 20px; 
+        margin: 470px 0 0 0; 
+    }
+    
+    code{
+        overflow-x: auto;  
+    }
+}
+
+@media only screen and (max-width: 600px){
+    #main-doc{
+        margin-top: 300px;
+    }
+}

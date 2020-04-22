@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tech-Doc-Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="main-container">
+        <nav id="navbar">
+            <header>
+                <h1>CSS DOCUMENTATION</h1>
+            </header>
+            <ul id="nav-list">
+                <li><a href="#introduction_to_css" class="nav-link">Introduction to CSS</a></li>
+                <li><a href="#css_syntax" class="nav-link">CSS Syntax</a></li>
+                <li><a href="#how_to_use_css" class="nav-link">How To Use CSS</a></li>
+                <li><a href="#css_colors" class="nav-link">CSS Colors</a></li>
+                <li><a href="#css_backgrounds" class="nav-link">CSS Backgrounds</a></li>
+                <li><a href="#css_borders" class="nav-link">CSS Borders</a></li>
+                <li><a href="#css_margins" class="nav-link">CSS Margins</a></li>
+                <li><a href="#css_padding" class="nav-link">CSS Padding</a></li>
+                <li><a href="#css_links" class="nav-link">CSS Links</a></li>
+                <li><a href="#css_lists" class="nav-link">CSS Lists</a></li>
+                <li><a href="#css_tables" class="nav-link">CSS Tables</a></li>
+                <li><a href="#css_layout" class="nav-link">CSS Layout</a></li>
+                <li><a href="#css_forms" class="nav-link">CSS Forms</a></li>
+            </ul>
+        </nav>
+
+        <main id="main-doc"> 
+            <section class="main-section" id="introduction_to_css">
+                <h1 id="section-title">Introduction to CSS</h1>
+                <article>
+                    <h1 class="section-sub-title">What is CSS?</h1>
+                    <ul>
+                        <li>CSS stands for Cascading Style Sheets</li>
+                        <li>CSS describes how HTML elements are to be 
+                            displayed on screen, paper, or in other media</li>
+                        <li>CSS saves a lot of work. It can control the layout of 
+                            multiple web pages all at once</li>
+                        <li>External stylesheets are stored in CSS files</li>
+                    </ul>
+                    <h1 class="section-sub-title">Why Use CSS?</h1>
+                    <p>CSS is used to define styles for your web pages, including the design, 
+                        layout and variations in display for different devices and screen sizes. 
+                    </p>
+                </article>
+            </section>
+
+            <section class="main-section" id="css_syntax">
+                <h1 id="section-title">CSS Syntax</h1>
+                <article>
+                    <p>A CSS rule-set consists of a selector and a declaration block:</p>
+                    <p>The selector points to the HTML element you want to style.</p>
+                    <p>Each declaration includes a CSS property name and a value,
+                     separated by a colon.</p>
+                    <p>A CSS declaration always ends with a semicolon, and declaration 
+                    blocks are surrounded by curly braces.</p>
+                    <p>In the following example all &lt;P&gt; elements will be center-aligned, with a red text color:</p>
+                    
+                    <code>
+                        <div class="code-text">
+                            p {
+                                color: red;
+                                text-align: center;
+                            }
+                        </div>
+                    </code>
+
+                    <h1 class="section-sub-title">CSS Selectors</h1>
+                    <p>CSS selectors are used to "find" (or select) HTML elements 
+                    based on their element name, id, class, attribute, and more.</p>
+                    <h1 class="section-sub-title">The element Selector</h1>
+                    <p>The element selector selects elements based on the element name.</p>
+                    <p>You can select all &lt;P&gt; elements on a page like this (in this case, all 
+                        &lt;P&gt; elements will be center-aligned, with a red text color):</p>
+                    
+                    <code>
+                        <div class="code-text">
+                            p {
+                                text-align: center;
+                                color: red;
+                            }
+                        </div>
+                    </code>
+
+                    <h1 class="section-sub-title">The id Selector</h1>
+                    <p>To select an element with a specific id, write a hash (#) character, 
+                        followed by the id of the element.</p>
+                        <p>The style rule below will be applied to the HTML element with id="para1":</p>
+                    
+                    <code>
+                        <div class="code-text">
+                            #para1 {
+                                text-align: center;
+                                color: red;
+                            }
+                        </div>
+                    </code>
+
+                    <h1 class="section-sub-title">The class Selector</h1>
+                    <p>The class selector selects elements with a specific class attribute.</p>
+
+                    <p>To select elements with a specific class, write a period (.) character, 
+                    followed by the name of the class.</p>
+
+                    <p>In the example below, all HTML elements with class="center" 
+                    will be red and center-aligned:</p>
+
+                    <code>
+                        <div class="code-text">
+                            p.center {
+                                text-align: center;
+                                color: red;
+                            }
+                        </div>
+                    </code>
+
+                    <p>HTML elements can also refer to more than one class.</p>
+
+                    <p>In the example below, the &lt;P&gt; element will be styled 
+                    according to class="center" and to class="large":</p>
+                    <p class="center large">This paragraph refers to two classes.</p>
+
+                <h1 class="section-sub-title">CSS Comments</h1>
+                <p>Comments are used to explain the code, and may help when you edit 
+                the source code at a later date.</p>
+
+                <p>Comments are ignored by browsers.</p>
+
+                <p>A CSS comment starts with</p>
+                    
+                    <code> 
+                        <div class="code-text">
+                            /* and ends with */
+                        </div>
+                    </code> 
+
+                    <p>Comments can also span multiple lines:</p>
+                </article>
+            </section>
+    
+            <section class="main-section" id="how_to_use_css">
+                <h1 id="section-title">How To Use CSS</h1>
+                <article>
+                    <p>There are three ways of inserting a style sheet:</p>
+                    <ul>
+                        <li>External style sheet</li>
+                        <li>Internal style sheet</li>
+                        <li>Inline style</li>
+                    </ul>
+                    
+                    <h1 class="section-sub-title">External Style Sheet</h1>
+                    <p>With an external style sheet, you can change the look of an 
+                        entire website by changing just one file!</p>
+                    <p>Each page must include a reference to the external style 
+                        sheet file inside the &lt; link &gt; element. The &lt; link &gt; element 
+                        goes inside the &lt; head &gt; section: </p>
+                    <p>Example:</p>
+
+                    <code>
+                        <div class="code-text">
+                            &lt;head&gt;
+                                &lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt;
+                            &lt;/head&gt;
+                        </div>
+                    </code>
+
+                    <p>An external style sheet can be written in any text editor. 
+                    The file should not contain any html tags. The style sheet 
+                    file must be saved with a .css extension.</p>
+
+                    <p>Here is how the "myStyle.css" looks:</p>
+
+                    <code>
+                        <div class="code-text">
+                            body {
+                                background-color: lightblue;
+                            }
+                            
+                            h1 {
+                                color: navy;
+                                margin-left: 20px;
+                            }
+                        </div>
+                    </code>
+
+                    Internal Style Sheet
+                    <p>An internal style sheet may be used if one single page has a 
+                    unique style.</p>
+
+                    <p>Internal styles are defined within the &lt; style &gt; element, inside
+                     the &lt; head &gt; section of an HTML page: </p>
+                     <p>Example:</p>
+
+                    <code>
+                        <div class="code-text">
+                            &lt;head&gt;
+                                &lt;style&gt;
+                                body {
+                                    background-color: linen;
+                                }
+                                
+                                h1 {
+                                    color: maroon;
+                                    margin-left: 40px;
+                                } 
+                                &lt;/style&gt;
+                            &lt;/head&gt;
+                        </div>
+                    </code>
+
+                    <h1 class="section-sub-title">Inline Styles</h1>
+                    <p>An inline style may be used to apply a unique style for a 
+                        single element.</p>
+
+                    <p>To use inline styles, add the style attribute to the relevant 
+                        element. The style attribute can contain any CSS property.</p>
+
+                    <p>The example below shows how to change the color and the left 
+                        margin of a &lt;h1&gt; element:</p>
+
+                    <p>Example</p>
+                    &lt;h1 style="color:blue;margin-left:30px;">This is a heading.&lt;/h1&gt;
+                </article>
+            </section>
+        
+            <section class="main-section" id="css_colors">
+                <h1 id="section-title">CSS Colors</h1>
+                <article>
+                    <p>Colors are displayed combining RED, GREEN, and BLUE light.</p>
+
+                    <p>Colors in CSS are most often specified by:</p>
+                    <ul>
+                        <li>a valid color name - like "red"</li>
+                        <li>an RGB value - like "rgb(255, 0, 0)"</li>
+                        <li>a HEX value - like "#ff0000"</li>
+                    </ul>
+                    <p><b>Note:</b> Color names are case-insensitive: "Red" is the same as "red"
+                        or "RED".</p> 
+                    <p>Example:</p>
+
+                    <code>
+                        <div class="code-text">
+                            p.center {
+                                text-align: center;
+                                color: rgb(255, 0, 0);
+                            }
+                        </div>
+                    </code>
+
+                </article>
+            </section>
+
+            <section class="main-section" id="css_backgrounds">
+                <h1 id="section-title">CSS Backgrounds</h1>
+                <article>
+                    <p>The CSS background properties are used to define the background 
+                        effects for elements.</p>
+                        <h1 class="section-sub-title">CSS background properties:</h1>
+                        <ul>
+                            <li>background-color</li>
+                            <li>background-image</li>
+                            <li>background-repeat</li>
+                            <li>background-attachment</li>
+                            <li>background-position</li>
+                        </ul>
+                    <p>Background color is set like this:</p>
+
+                    <code> 
+                        <div class="code-text">  
+                            body {
+                                background-color: lightblue;
+                            }
+                        </div>
+                    </code>
+
+                    <p>The background image for a page can be set like this:</p>
+
+                    <code>
+                        <div class="code-text">
+                            body {
+                                background-image: url("paper.gif");
+                            }
+                        </div>
+                    </code>
+
+                </article>
+            </section>
+
+            <section class="main-section" id="css_borders">
+                <h1 id="section-title">CSS Borders</h1>
+                <article>
+                    <h1 class="section-sub-title">CSS Border Properties</h1>
+                    <p>The CSS border properties allow you to specify the style, 
+                        width, and color of an element's border.</p>
+                    <p>This element has a groove border that is 15px wide and green.</p>
+                    <p>he border-style property specifies what kind of border to display.</p>
+
+                    <p>The following values are allowed:</p>
+                    <p>Example:</p>
+
+                    <code>
+                        <div class="code-text">
+                            p.dotted {border-style: dotted;}
+                            p.dashed {border-style: dashed;}
+                            p.solid {border-style: solid;}
+                            p.double {border-style: double;}
+                            p.groove {border-style: groove;}
+                            p.ridge {border-style: ridge;}
+                            p.inset {border-style: inset;}
+                            p.outset {border-style: outset;}
+                            p.none {border-style: none;}
+                            p.hidden {border-style: hidden;}
+                            p.mix {border-style: dotted dashed solid double;}
+                        </div>
+                    </code>
+
+                    <h1 class="section-sub-title">Border Width</h1>
+                    <p>The border-width property specifies the width of the four borders.</p>
+
+                    </p>The width can be set as a specific size (in px, pt, cm, em, etc) or 
+                        by using one of the three pre-defined values: thin, medium, or thick.</p>
+
+                    </p>The border-width property can have from one to four values 
+                    (for the top border, right border, bottom border, and the left border).</p>
+                    <p>Example:</p>
+
+                    <code>
+                        <div class="code-text">
+                            p.one {
+                                border-style: solid;
+                                border-width: 5px;
+                            }
+                        </div>
+                    </code>
+
+                    <h1 class="section-sub-title">Border Color</h1>
+                <p>The border-color property is used to set the color of the four borders.</p>
+                <p>The border-color property can have from one to four values (for the top border,
+                 right border, bottom border, and the left border).</p>
+
+                <p>If border-color is not set, it inherits the color of the element.</p>
+                
+                <p>The border-color property can have from one to four values (for the top 
+                    border, right border, bottom border, and the left border). </p>
+
+                <p>If border-color is not set, it inherits the color of the element.</p>
+                </article>
+            </section>
+
+            <section class="main-section" id="css_margins">
+                <h1 id="section-title">CSS Margins</h1>
+                <article>
+                    <h1 class="section-sub-title">CSS Margin Properties</h1>
+                    <p>The CSS margin properties are used to generate space around 
+                        elements.</p>
+                    <p>The margin properties set the size of the white space OUTSIDE
+                        the border.</p>
+                    <p>This element has a margin of 80px.</p>
+                    <p>CSS has properties for specifying the margin for each side of 
+                        an element:</p>
+                    <p>Example:</p>
+
+                    <code>
+                        <div class="code-text">
+                            p {
+                                margin-top: 100px;
+                                margin-bottom: 100px;
+                                margin-right: 150px;
+                                margin-left: 80px;
+                            }
+                        </div>
+                    </code>
+
+                </article>
+            </section>
+    
+            <section class="main-section" id="css_padding">
+                <h1 id="section-title">CSS Padding</h1>
+                <article>
+                    <h1 class="section-sub-title">CSS Padding Properties</h1>
+                    <p>The CSS padding properties are used to generate space around content.</p>
+                    <p>The padding properties set the size of the white space between the element
+                    content and the element border.</p>
+                    <p>This element has a padding of 50px.</p>
+
+                    <h1 class="section-sub-title">Padding - Individual Sides</h1>
+                    <p>CSS has properties for specifying the padding for each side of an 
+                    element:</p>
+                    <p>Example:</p>
+
+                    <code>
+                        <div class="code-text">
+                            p {
+                                padding-top: 50px;
+                                padding-right: 30px;
+                                padding-bottom: 50px;
+                                padding-left: 80px;
+                            }
+                        </div>
+                    </code>
+
+                    <p>If the padding property has four values:</p>
+
+                    <h1 class="section-sub-title">padding: 25px 50px 75px 100px;</h1>
+                    <ul>
+                        <li>top padding is 25px</li>
+                        <li>right padding is 50px</li>
+                        <li>bottom padding is 75px</li>
+                        <li>left padding is 100px</li>
+                    </ul>
+                </article>
+            </section>
+    
+            <section class="main-section" id="css_links">
+                <h1 id="section-title">CSS Links</h1>
+                <article>
+                    <h1 class="section-sub-title">Styling Links</h1> 
+                    <p>Links can be styled with any CSS property (e.g. color, 
+                    font-family, background, etc.).</p>
+                    <p>Example:</p>
+
+                    <code>
+                        <div class="code-text">
+                            a {
+                                color: hotpink;
+                            } 
+                        </div>     
+                    </code>
+
+                    <h1 class="section-sub-title">The four links states are:</h1>
+                    <ul>
+                        <li>a:link - a normal, unvisited link</li>
+                        <li>a:visited - a link the user has visited</li>
+                        <li>a:hover - a link when the user mouses over it</li>
+                        <li>a:active - a link the moment it is clicked</li>
+                    </ul>
+                </article>
+            </section>
+    
+            <section class="main-section" id="css_lists">
+                <h1 id="section-title">CSS Lists</h1>
+                <article>
+                    <h1 class="section-sub-title">HTML Lists and CSS List Properties</h1>
+                    <p>In HTML, there are two main types of lists:</p>
+                    <ul>
+                        <li>unordered lists (&lt;ul&gt;) - the list items are marked with bullets</li>
+                        <li>ordered lists (&lt;ol&gt;) - the list items are marked with numbers or letters</li>
+                    </ul>
+                    <h1 class="section-sub-title">Styling List With Colors</h1>
+                    Anything added to the &lt;ol&gt; or &lt;ul&gt; tag, affects the entire list, while properties added to the 
+                    &lt;li&gt; tag will affect the individual list items:
+                    <p>Example:</p>
+
+                    <code>
+                        <div class="code-text">
+                            ol {
+                                background: #ff9999;
+                                padding: 20px;
+                            }
+                            
+                            ul {
+                                background: #3399ff;
+                                padding: 20px;
+                            }
+                        </div>     
+                    </code>
+
+                </article>
+            </section>
+    
+            <section class="main-section" id="css_tables">
+                <h1 id="section-title">CSS Tables</h1>
+                <article>
+                    <h1 class="section-sub-title">Table Borders</h1> 
+                    <p>To specify table borders in CSS, use the border property.</p>
+                    <h1 class="section-sub-title">Collapse Table Borders</h1>
+                    <p>The border-collapse property sets whether the table borders should 
+                    be collapsed into a single border:</p>
+                    <p>Example:</p>
+
+                        <code>
+                            <div class="code-text">
+                                table {
+                                    border-collapse: collapse;
+                                }  
+                            </div>  
+                        </code>
+
+                    <h1 class="section-sub-title">Table Width and Height</h1>
+                    <p>Width and height of a table are defined by the width and height 
+                    properties.</p>
+                    <p>Example:</p>
+
+                    <code>
+                        <div class="code-text">
+                            table {
+                                width: 100%;
+                            }
+                            
+                            th {
+                                height: 50px;
+                            }   
+                        </div>
+                    </code>
+
+                </article>
+            </section>
+
+            <section class="main-section" id="css_layout">
+                <h1 id="section-title">CSS Layout</h1>
+                <article>
+                    <h1 class="section-sub-title">The position Property</h1> 
+                    <p>The position property specifies the type of positioning method used 
+                    for an element (static, relative, fixed or absolute).</p>
+                    <p>Example:</p>
+
+                    <code>
+                        <div class="code-text">
+                            div.static {
+                                position: relative;
+                                border: 3px solid #73AD21;
+                            }
+                        </div>
+                    </code>
+
+                    <p>An element with position: relative; is positioned relative to its 
+                    normal position.</p>
+                </article>
+            </section>
+
+                
+            <section class="main-section" id="css_forms">
+                <h1 id="section-title">CSS Forms</h1>
+                <article>
+                    <p>The look of an HTML form can be greatly improved with CSS</p>
+                    <h1 class="section-sub-title">Styling Input Fields</h1>
+                    <p>Example:</p>
+
+                    <code>
+                        <div class="code-text">
+                            input {
+                                width: 100%;
+                            }
+                        </div>
+                    </code>
+
+                    <p>If you only want to style a specific input type, you can use 
+                    attribute selectors:</p>
+                    <ul>
+                        <li>input[type = text] - will only select text fields</li>
+                        <li>input[type = password] - will only select password fields</li>
+                        <li>input[type = number] - will only select number fields</li>
+                    </ul>
+                    <p>Example:</p>
+
+                    <code>
+                        <div class="code-text">
+                            input[type=text] {
+                                width: 100%;
+                                padding: 12px 20px;
+                            }
+                        </div>
+                    </code>
+                    
+                </article>
+            </section>
+            
+            <div id="reference-div">
+                <h1 class="reference">Reference</h1>
+                <p>All the documentation in this page is taken from
+                <a href="https://www.w3schools.com" target="_blank">w3schools.com</a>
+                </p>
+            </div>
+
+            <footer>
+                &copy2020 designed by queenest.com
+            </footer>
+        </main>
+    </div>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
