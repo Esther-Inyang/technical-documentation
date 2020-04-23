@@ -29,13 +29,13 @@ h1, p{
     background-color: #ddb189;
 }
 
-header{
+#css-doc{
     padding-top: 20px;
     background: #faf2e9;
     border-bottom: 1px dotted #808080;
 }
 
-header h1{
+#css-doc_title{
     margin: 0;
     padding: 8px 10px;
     font-size: 26px;
